@@ -1,6 +1,10 @@
 {
   "name": "nr-pdf-tools",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:FellowRoboticists/nr-pdf-tools.git"
+  },
   "description": "Node tools for processing PDF files.",
   "main": "./lib/index.js",
   "scripts": {
