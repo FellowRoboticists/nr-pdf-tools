@@ -1,0 +1,28 @@
+{
+  "name": "nr-pdf-tools",
+  "version": "0.1.0",
+  "description": "Node tools for processing PDF files.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "pdf",
+    "tools"
+  ],
+  "dependencies": {
+    "pexec": "0.1.0",
+    "string-template": "^0.2.1"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "fs-extra": "^0.24.0",
+    "tmp": "0.0.27"
+  },
+  "author": {
+    "name": "Naive Roboticist",
+    "email": "naiveroboticist@gmail.com"
+  },
+  "license": "MIT",
+  "readme": "README.md"
+}
