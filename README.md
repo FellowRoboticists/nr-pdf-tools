@@ -9,6 +9,15 @@ An npm module that allows you to perform a variety of activities on a PDF docume
 * OCR a PDF Document and return the text found.
 * Create an image from the PDF document. 
 
+## Dependencies
+
+For all these tools to work you will need to install a few things:
+
+* tesseract-ocr To use the OCR function
+* imagemagick To do some of the conversion functions
+* poppler-utils To do the PDF text extraction
+* pdftk To do the PDF splitting, combining
+
 ## Installing
 
 To install 'nr-pdf-tools':
