@@ -15,7 +15,7 @@
     "tools"
   ],
   "dependencies": {
-    "pexec": "0.1.0",
+    "@naiveroboticist/pexec": "0.1.0",
     "string-template": "^0.2.1"
   },
   "devDependencies": {

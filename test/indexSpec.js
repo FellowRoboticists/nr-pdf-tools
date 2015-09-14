@@ -299,4 +299,17 @@ describe('pdf-tools', function() {
     });
   });
 
+  describe('#identifyImageSize', function() {
+
+    it('returns the width and height of the image', function(done) {
+      tools.identifyImageSize(pngDoc).
+        then(function(imgSize) {
+          expect(imgSize.height).to.eq(792);
+          expect(imgSize.width).to.eq(612);
+          done();
+        }).
+        catch(done);
+    });
+  });
+
 });
