@@ -312,4 +312,12 @@ describe('pdf-tools', function() {
     });
   });
 
+  describe('#watermarkPdf', function() {
+    it('correctly watermarks a portrait PDF', function(done) {
+      tools.watermarkPdf(pdfDoc).
+        then(function() { done(); }).
+        catch(done);
+    });
+  });
+
 });
