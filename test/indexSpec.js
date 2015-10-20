@@ -5,8 +5,10 @@ var fse = require('fs-extra');
 var tools = require('../lib/index.js');
 
 var pdfFile = "InnocuousDocument.pdf";
+var lpdfFile = "LInnocuousDocument.pdf";
 var pdfDir = "test-data";
 var pdfDoc = path.join(pdfDir, pdfFile);
+var lpdfDoc = path.join(pdfDir, lpdfFile);
 var pngDoc = path.join(pdfDir, "InnocuousDocument.png");
 
 describe('pdf-tools', function() {
@@ -314,7 +316,7 @@ describe('pdf-tools', function() {
 
   describe('#watermarkPdf', function() {
     it('correctly watermarks a portrait PDF', function(done) {
-      tools.watermarkPdf(pdfDoc).
+      tools.watermarkPdf(pdfDoc, 'TIG BORN AMIGING').
         then(function() { done(); }).
         catch(done);
     });

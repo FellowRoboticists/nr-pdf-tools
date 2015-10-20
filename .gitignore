@@ -3,3 +3,6 @@
 
 # npm
 node_modules
+
+# Test data
+test-data/watermark*
