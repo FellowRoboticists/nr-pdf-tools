@@ -47,6 +47,40 @@ describe('pdf-tools', function() {
     });
   });
 
+  describe('#separateDocument', function() {
+    
+    it('returns the page where the pages have been split to', function(done) {
+      tmp.dir({ unsafeCleanup: true }, function(err, tmpPath, tmpCb) {
+        if (err) { return done(err); }
+        tools.separateDocument(pdfDoc, tmpPath).
+          then(function(pageDir) {
+            tmpCb();
+            expect(pageDir).to.eq(tmpPath);
+            done();
+          }).
+          catch(function(err) {
+            tmpCb();
+            done(err);
+          });
+      });
+    });
+
+    it('generates an error when the file to split doesnt exist', function(done) {
+      tmp.dir({ unsafeCleanup: true }, function(err, tmpPath, tmpCb) {
+        if (err) { done(err); }
+        tools.separateDocument("/tmp/not_there.pdf", tmpPath).
+          then(function(pageDir) {
+            tmpCb();
+            done("Should have been an error");
+          }).
+          catch(function(err) {
+            tmpCb();
+            done();
+          });
+      });
+    });
+  });
+
 
   describe('#createDocument', function() {
 
